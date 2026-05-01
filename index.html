@@ -129,6 +129,13 @@ h2 {
   font-size: 15px;
 }
 
+.card img {
+  width: 100%;
+  border-radius: 16px;
+  margin: 15px 0;
+  transition: 0.2s;
+}
+
 .wide { grid-column: span 2; }
 
 .link-card {
@@ -141,6 +148,10 @@ h2 {
 .link-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.link-card:hover img {
+  transform: scale(1.02);
 }
 
 .small-label {
@@ -260,6 +271,16 @@ in oncology and public health.
 <p>Research featured in national media.</p>
 </a>
 
+<div class="card wide">
+<span class="small-label">International Conference · Brussels</span>
+<h3>Euromelanoma Campaign Conference</h3>
+<img src="euromelanoma.jpg" alt="Euromelanoma Campaign Conference in Brussels">
+<p>
+Participation in the Euromelanoma Campaign Conference, a European initiative
+focused on skin cancer prevention, early detection, and public health awareness.
+</p>
+</div>
+
 <a class="card link-card wide" href="https://womentech.eu/eventi/donne-e-steam-tra-passato-e-futuro/" target="_blank">
 <span class="small-label">Outreach</span>
 <h3>Women & STEAM</h3>
@@ -310,7 +331,9 @@ in oncology and public health.
 <span class="small-label">Oral Communication · Gender Medicine</span>
 <h3>The prognostic role of sex and anemia in tongue cancer patients</h3>
 <p>
-Presented at the 10th Congress of the International Society of Gender Medicine, Padua <br>
+Presented at the 10th Congress of the International Society of Gender Medicine.<br>
+Oriana D'Ecclesiis, Marta Tagliabue, <strong>Aurora Gaeta</strong>, Rita De Bernardis,
+Sara Gandini, Mohssen Ansarin, Susanna Chiocca.
 </p>
 </div>
 
@@ -373,4 +396,3 @@ loadOpenAlexPublications();
 
 </body>
 </html>
-
