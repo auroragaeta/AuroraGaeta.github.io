@@ -171,6 +171,7 @@ footer {
 @media (max-width: 800px) {
   .hero { grid-template-columns: 1fr; }
   .grid { grid-template-columns: 1fr; }
+  .wide { grid-column: span 1; }
   nav { display: none; }
 }
 </style>
@@ -184,6 +185,7 @@ footer {
 <a href="#about">About</a>
 <a href="#expertise">Expertise</a>
 <a href="#work">Work</a>
+<a href="#asco">ASCO Posters</a>
 <a href="#publications">Publications</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -204,7 +206,7 @@ epidemiology, predictive modelling, and AI in healthcare.
 </div>
 
 <div class="photo-card">
-<img src="pic.png" class="profile-pic">
+<img src="pic.png" class="profile-pic" alt="Aurora Gaeta">
 </div>
 </section>
 
@@ -229,38 +231,70 @@ in oncology and public health.
 </section>
 
 <section id="work">
-<h2>Selected Work & Media</h2>
+<h2>Research, Media & Impact</h2>
 
 <div class="grid">
 
 <a class="card link-card wide" href="https://www.unimib.it/aurora-gaeta" target="_blank">
 <span class="small-label">University profile</span>
 <h3>University of Milano-Bicocca</h3>
-<p>Official academic profile</p>
+<p>Official academic profile.</p>
 </a>
 
 <a class="card link-card" href="https://www.fondazioneieomonzino.it/ricercatore/aurora-gaeta/" target="_blank">
 <span class="small-label">Research · IEO</span>
 <h3>IEO-MONZINO Foundation</h3>
-<p>Research fellowship recipient</p>
+<p>Research fellowship recipient.</p>
 </a>
 
 <a class="card link-card" href="https://www.ieo.it/en/RESEARCH/Radiomic/" target="_blank">
 <span class="small-label">Research Area · IEO</span>
 <h3>Radiomics & AI in Oncology</h3>
-<p>Work within imaging-based predictive modelling and precision medicine</p>
+<p>Work within imaging-based predictive modelling and precision medicine.</p>
 </a>
 
 <a class="card link-card" href="https://www.ilsole24ore.com/art/dopo-tumore-pelle-muoversi-puo-aiutare-vivere-piu-lungo-scienza-dice-si-AIkbc1yB" target="_blank">
 <span class="small-label">Media</span>
 <h3>Il Sole 24 Ore</h3>
-<p>Research featured in national media</p>
+<p>Research featured in national media.</p>
 </a>
 
 <a class="card link-card wide" href="https://womentech.eu/eventi/donne-e-steam-tra-passato-e-futuro/" target="_blank">
 <span class="small-label">Outreach</span>
 <h3>Women & STEAM</h3>
-<p>Mentioned in initiative for women in science</p>
+<p>Mentioned in initiative for women in science.</p>
+</a>
+
+</div>
+</section>
+
+<section id="asco">
+<h2>ASCO Posters & Abstracts</h2>
+
+<div class="grid">
+
+<a class="card link-card wide" href="https://ascopubs.org/doi/10.1200/JCO.2025.43.16_suppl.e21542" target="_blank">
+<span class="small-label">ASCO 2025 · Poster / Abstract</span>
+<h3>Sex and gender influence on adverse events for melanoma patients</h3>
+<p>A comprehensive review and meta-analysis.</p>
+</a>
+
+<a class="card link-card" href="https://ascopubs.org/doi/abs/10.1200/CCI-25-00210" target="_blank">
+<span class="small-label">ASCO / JCO CCI · AI in Medicine</span>
+<h3>Public Perspectives on Artificial Intelligence in Medicine and Radiology</h3>
+<p>Insights from a survey in an Italian cancer referral center.</p>
+</a>
+
+<a class="card link-card" href="https://ascopubs.org/doi/10.1200/JCO.2022.40.16_suppl.9541" target="_blank">
+<span class="small-label">ASCO 2022 · Poster / Abstract</span>
+<h3>Triplet combinations of immunotherapy and targeted therapy</h3>
+<p>Meta-analysis of randomized phase II–III trials in BRAF V600-mutant melanoma.</p>
+</a>
+
+<a class="card link-card wide" href="https://ascopubs.org/doi/10.1200/JCO.2024.42.16_suppl.e23522" target="_blank">
+<span class="small-label">ASCO 2024 · Poster / Abstract</span>
+<h3>Fibroadenoma-like areas in malignant phyllodes tumors of the breast</h3>
+<p>Retrospective analysis from a referral center.</p>
 </a>
 
 </div>
@@ -277,7 +311,7 @@ in oncology and public health.
 <section id="contact">
 <h2>Contact</h2>
 <div class="card">
-<p>Email: auroragaeta@gmail.com</p>
+<p>Email: <a href="mailto:auroragaeta@gmail.com">auroragaeta@gmail.com</a></p>
 </div>
 </section>
 
@@ -289,26 +323,28 @@ in oncology and public health.
 
 <script>
 async function loadOpenAlexPublications() {
-const res = await fetch("https://api.openalex.org/works?filter=authorships.author.orcid:0000-0002-4944-7685&sort=cited_by_count:desc&per_page=100");
-const data = await res.json();
+  const res = await fetch("https://api.openalex.org/works?filter=authorships.author.orcid:0000-0002-4944-7685&sort=cited_by_count:desc&per_page=100");
+  const data = await res.json();
 
-const pubs = data.results;
+  const pubs = data.results;
 
-document.getElementById("pub-summary").innerHTML =
-pubs.length + " publications";
+  document.getElementById("pub-summary").innerHTML =
+    pubs.length + " publications";
 
-document.getElementById("pub-list").innerHTML =
-pubs.map(p => `
-<div class="publication">
-<h3>${p.title}</h3>
-<p>${p.primary_location?.source?.display_name || ""} · ${p.publication_year}</p>
-<span class="badge">${p.cited_by_count} citations</span>
-${p.doi ? `<p><a href="${p.doi}" target="_blank">DOI</a></p>` : ""}
-</div>
-`).join("");
+  document.getElementById("pub-list").innerHTML =
+    pubs.map(p => `
+      <div class="publication">
+        <h3>${p.title}</h3>
+        <p>${p.primary_location?.source?.display_name || ""} · ${p.publication_year}</p>
+        <span class="badge">${p.cited_by_count} citations</span>
+        ${p.doi ? `<p><a href="${p.doi}" target="_blank">DOI</a></p>` : ""}
+      </div>
+    `).join("");
 }
+
 loadOpenAlexPublications();
 </script>
 
 </body>
 </html>
+
