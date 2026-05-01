@@ -355,7 +355,7 @@ async function loadOpenAlexPublications() {
     );
 
     summary.innerHTML =
-      `<strong>${publications.length}</strong> publications retrieved from OpenAlex · ` +
+      `<strong>${publications.length}</strong> · ` +
       `<strong>${totalCitations}</strong> citations`;
 
     container.innerHTML = publications.map(pub => {
