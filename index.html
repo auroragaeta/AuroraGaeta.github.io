@@ -4,109 +4,296 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aurora Gaeta | Biostatistician</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 850px;
-      margin: 40px auto;
-      padding: 0 20px;
+      font-family: Inter, Arial, sans-serif;
+      background: #f7f5f1;
+      color: #1f1f1f;
       line-height: 1.6;
-      color: #222;
     }
-    h1 {
-      margin-bottom: 5px;
+
+    header {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    h2 {
-      margin-top: 35px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 5px;
-    }
-    .subtitle {
-      font-size: 1.1em;
-      color: #555;
-    }
-    a {
-      color: #0056b3;
+
+    nav a {
+      margin-left: 24px;
+      color: #333;
       text-decoration: none;
+      font-size: 14px;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .hero {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: center;
     }
+
+    .hero h1 {
+      font-size: 56px;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      max-width: 620px;
+      margin-bottom: 30px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e7dfd2;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #1f1f1f;
+      color: white;
+      padding: 13px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      margin-right: 12px;
+      font-size: 14px;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: #1f1f1f;
+      border: 1px solid #1f1f1f;
+    }
+
+    .photo-card {
+      background: #e7dfd2;
+      border-radius: 28px;
+      padding: 40px;
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #555;
+      font-size: 18px;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 24px;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .card p, .card li {
+      color: #555;
+      font-size: 15px;
+    }
+
     ul {
-      padding-left: 22px;
+      padding-left: 18px;
     }
-    .contact {
-      margin-top: 30px;
-      padding-top: 15px;
-      border-top: 1px solid #ddd;
+
+    .wide {
+      grid-column: span 2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wide {
+        grid-column: span 1;
+      }
+
+      nav {
+        display: none;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <h1>Aurora Gaeta</h1>
-  <p class="subtitle">Biostatistician | Real-World Evidence | Oncology | Data Science</p>
+<header>
+  <strong>Aurora Gaeta</strong>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <h2>About Me</h2>
-  <p>
-    Biostatistician and PhD Candidate with expertise in real-world data analysis,
-    epidemiology, and predictive modelling in healthcare.
-  </p>
-  <p>
-    I work on transforming complex clinical and epidemiological data into actionable
-    insights to support decision-making in oncology and public health.
-  </p>
+<main>
 
-  <h2>Key Expertise</h2>
-  <ul>
-    <li>Real-world evidence (RWE)</li>
-    <li>Clinical and epidemiological data analysis</li>
-    <li>Predictive modelling and survival analysis</li>
-    <li>Oncology and public health</li>
-    <li>Radiomics and AI in healthcare</li>
-  </ul>
+  <section class="hero">
+    <div>
+      <span class="tag">Biostatistician · RWE · Oncology</span>
+      <h1>Turning healthcare data into evidence and insight.</h1>
+      <p>
+        I am a biostatistician and PhD Candidate working at the intersection of
+        real-world evidence, epidemiology, predictive modelling, oncology, and AI in healthcare.
+      </p>
+      <a class="button" href="cv.pdf">Download CV</a>
+      <a class="button secondary" href="mailto:auroragaeta@gmail.com">Contact me</a>
+    </div>
 
-  <h2>Experience</h2>
-  <p>
-    <strong>Research Fellow – European Institute of Oncology</strong><br>
-    Real-world data analysis, predictive modelling, survival analysis, and multicentric oncology studies.
-  </p>
+    <div class="photo-card">
+      Add your photo here<br>
+      or replace this box with an image
+    </div>
+  </section>
 
-  <p>
-    <strong>Visiting Research Scholar – Harvard Medical School</strong><br>
-    Cardiovascular clinical research and international collaboration in biostatistics and epidemiology.
-  </p>
+  <section id="about">
+    <h2>About</h2>
+    <div class="card">
+      <p>
+        I work on clinical and epidemiological data to generate evidence supporting
+        decision-making in oncology and public health. My experience includes real-world
+        data analysis, survival analysis, predictive modelling, radiomics, systematic reviews,
+        and meta-analyses.
+      </p>
+    </div>
+  </section>
 
-  <h2>Selected Projects</h2>
-  <ul>
-    <li>Real-world oncology data analysis</li>
-    <li>Radiomics and imaging-based prediction</li>
-    <li>Systematic reviews and meta-analyses</li>
-    <li>Clinical and epidemiological evidence generation</li>
-  </ul>
+  <section id="expertise">
+    <h2>Expertise</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Real-World Evidence</h3>
+        <p>Clinical datasets, epidemiological data, treatment outcomes, toxicity profiles, and prognostic factors.</p>
+      </div>
 
-  <h2>Publications</h2>
-  <ul>
-    <li>47+ peer-reviewed publications</li>
-    <li>H-index: 10</li>
-    <li><a href="https://orcid.org/0000-0002-4944-7685" target="_blank">ORCID Profile</a></li>
-  </ul>
+      <div class="card">
+        <h3>Statistical Modelling</h3>
+        <p>Survival analysis, competing risks, regression modelling, validation studies, and meta-analysis.</p>
+      </div>
 
-  <h2>Skills</h2>
-  <ul>
-    <li>R, Python, SQL</li>
-    <li>Survival analysis, competing risks, regression modelling</li>
-    <li>Machine learning and predictive modelling</li>
-    <li>Statistical analysis plans and scientific reporting</li>
-  </ul>
+      <div class="card">
+        <h3>AI & Radiomics</h3>
+        <p>Predictive modelling using imaging-derived features from PET, CT, MRI, ultrasound, and mammography.</p>
+      </div>
+    </div>
+  </section>
 
-  <div class="contact">
+  <section id="work">
+    <h2>Selected Work</h2>
+    <div class="grid">
+      <div class="card wide">
+        <h3>European Institute of Oncology</h3>
+        <p>
+          Research Fellow in Biostatistics working on oncology, epidemiology,
+          real-world data analysis, AI applications, and predictive modelling.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Harvard Medical School</h3>
+        <p>
+          Visiting Research Scholar at Brigham and Women’s Hospital, TIMI Study Group.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Publications</h3>
+        <p>47 peer-reviewed publications · H-index 10</p>
+      </div>
+
+      <div class="card wide">
+        <h3>Collaborations</h3>
+        <p>
+          Euromelanoma Program, M-SKIP Network, AI and Radiomics Board,
+          AIRC-funded research projects.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="card">
+      <ul>
+        <li>R, Python, SQL</li>
+        <li>Real-world evidence generation</li>
+        <li>Survival analysis and competing risks</li>
+        <li>Predictive modelling and machine learning</li>
+        <li>Systematic reviews and meta-analyses</li>
+        <li>Scientific reporting and statistical analysis plans</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
     <h2>Contact</h2>
-    <p>
-      Email: <a href="mailto:auroragaeta@gmail.com">auroragaeta@gmail.com</a>
-    </p>
-  </div>
+    <div class="card">
+      <p>Email: <a href="mailto:auroragaeta@gmail.com">auroragaeta@gmail.com</a></p>
+      <p>ORCID: <a href="https://orcid.org/0000-0002-4944-7685">0000-0002-4944-7685</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Aurora Gaeta
+</footer>
 
 </body>
 </html>
