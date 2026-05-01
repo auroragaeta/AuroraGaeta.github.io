@@ -1,6 +1,6 @@
 # Aurora Gaeta
 
-**Biostatisticiannnnn | Real-World Evidence | Oncology | Data Science**
+**Biostatistician| Real-World Evidence | Oncology | Data Science**
 
 ---
 
