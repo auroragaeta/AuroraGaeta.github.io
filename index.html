@@ -862,6 +862,36 @@
         display: block;
       }
 
+      .publications-intro {
+        margin-bottom: 36px;
+      }
+
+      .publications-intro p {
+        font-family: "Lora", Georgia, serif;
+        color: #4a4742;
+        font-size: 17px;
+        line-height: 1.76;
+        max-width: 680px;
+        margin-bottom: 24px;
+      }
+
+      .pub-block {
+        margin-bottom: 40px;
+      }
+
+      .pub-block-label {
+        font-size: 12px;
+        font-weight: 700;
+        color: #8f3d2d;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .pub-block .publication-list {
+        border-top: 1px solid #d7c8b5;
+        margin-top: 14px;
+      }
+
       .publication {
         --publication-paper: #fbfaf7;
         display: grid;
@@ -1668,82 +1698,68 @@
 
       <section id="publications">
         <h2>Publications</h2>
-        <div class="publication-book" aria-label="Selected publications booklet">
-          <div class="book-page book-page-left">
-            <span class="book-label">Selected works</span>
-            <h3>A publication record shaped by oncology, data, and clinical questions.</h3>
-            <p>
-              I publish across oncology, epidemiology, real-world evidence,
-              radiomics, and AI applications in healthcare, with a focus on
-              methods that can support clinical research and public health
-              decisions.
-            </p>
-            <div class="publication-metrics">
-              <div>
-                <strong id="publication-count">47</strong>
-                <span>peer-reviewed publications</span>
-              </div>
-              <div>
-                <strong>10</strong>
-                <span>H-index</span>
-              </div>
+
+        <div class="publications-intro">
+          <p>I publish across oncology, epidemiology, real-world evidence, radiomics, and AI applications in healthcare, with a focus on methods that can support clinical research and public health decisions.</p>
+          <div class="publication-metrics">
+            <div>
+              <strong id="publication-count">47</strong>
+              <span>peer-reviewed publications</span>
             </div>
-            <p class="book-note">
-              Selected publications are loaded from OpenAlex and ordered by citation count.
-            </p>
-          </div>
-
-          <div class="book-page book-page-right">
-            <div class="book-topline">
-              <span class="small-label">Featured papers</span>
-              <span id="pub-summary"></span>
-            </div>
-
-            <div class="featured-publications">
-              <article class="publication">
-                <span class="publication-year"><span>2025</span></span>
-                <div>
-                  <h3>Age-specific melanoma risk associated with nevi: a pooled analysis from the M-SKIP project</h3>
-                  <p>Journal of the German Society of Dermatology</p>
-                  <a class="publication-link" href="https://onlinelibrary.wiley.com/doi/abs/10.1111/ddg.15992" target="_blank" rel="noopener">View paper</a>
-                </div>
-              </article>
-
-              <article class="publication">
-                <span class="publication-year"><span>2025</span></span>
-                <div>
-                  <h3>Sex and gender influence on adverse events for melanoma patients: a comprehensive review and meta-analysis</h3>
-                  <p>British Journal of Cancer</p>
-                  <a class="publication-link" href="https://www.nature.com/articles/s41416-025-03266-0" target="_blank" rel="noopener">View paper</a>
-                </div>
-              </article>
-
-              <article class="publication">
-                <span class="publication-year"><span>2024</span></span>
-                <div>
-                  <h3>Histopathologic yields and concordance of in-bore MRI-targeted biopsy for prostate cancer diagnosis</h3>
-                  <p>Prostate cancer research</p>
-                </div>
-              </article>
-
-              <article class="publication">
-                <span class="publication-year"><span>2023</span></span>
-                <div>
-                  <h3>Are sex and gender considered in head and neck cancer clinical studies?</h3>
-                  <p>npj Precision Oncology</p>
-                  <a class="publication-link" href="https://www.nature.com/articles/s41698-023-00439-z" target="_blank" rel="noopener">View paper</a>
-                </div>
-              </article>
-            </div>
-
-            <div class="book-topline" style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #d7c8b5;">
-              <span class="small-label">Top cited papers</span>
-            </div>
-            <div id="selected-pub-list" class="selected-publications" aria-live="polite">
-              <p class="publication-loading">Loading selected publications...</p>
+            <div>
+              <strong>10</strong>
+              <span>H-index</span>
             </div>
           </div>
         </div>
+
+        <div class="pub-block">
+          <div class="pub-block-label">Featured papers</div>
+          <div class="publication-list">
+            <article class="publication">
+              <span class="publication-year"><span>2025</span></span>
+              <div>
+                <h3>Age-specific melanoma risk associated with nevi: a pooled analysis from the M-SKIP project</h3>
+                <p>Journal of the German Society of Dermatology</p>
+                <a class="publication-link" href="https://onlinelibrary.wiley.com/doi/abs/10.1111/ddg.15992" target="_blank" rel="noopener">View paper</a>
+              </div>
+            </article>
+
+            <article class="publication">
+              <span class="publication-year"><span>2025</span></span>
+              <div>
+                <h3>Sex and gender influence on adverse events for melanoma patients: a comprehensive review and meta-analysis</h3>
+                <p>British Journal of Cancer</p>
+                <a class="publication-link" href="https://www.nature.com/articles/s41416-025-03266-0" target="_blank" rel="noopener">View paper</a>
+              </div>
+            </article>
+
+            <article class="publication">
+              <span class="publication-year"><span>2024</span></span>
+              <div>
+                <h3>Histopathologic yields and concordance of in-bore MRI-targeted biopsy for prostate cancer diagnosis</h3>
+                <p>Prostate cancer research</p>
+              </div>
+            </article>
+
+            <article class="publication">
+              <span class="publication-year"><span>2023</span></span>
+              <div>
+                <h3>Are sex and gender considered in head and neck cancer clinical studies?</h3>
+                <p>npj Precision Oncology</p>
+                <a class="publication-link" href="https://www.nature.com/articles/s41698-023-00439-z" target="_blank" rel="noopener">View paper</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="pub-block">
+          <div class="pub-block-label">Top cited papers <span id="pub-summary"></span></div>
+          <div id="selected-pub-list" class="publication-list" aria-live="polite">
+            <p class="publication-loading">Loading selected publications...</p>
+          </div>
+        </div>
+
         <details class="publication-details">
           <summary>View full publication list</summary>
           <div id="pub-list" class="publication-list">
