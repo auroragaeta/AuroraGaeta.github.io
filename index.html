@@ -249,6 +249,12 @@
         margin-bottom: 0;
       }
 
+      .news-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
       .news-banner {
         display: flex;
         align-items: center;
@@ -1515,11 +1521,23 @@
       </section>
 
       <section id="news">
-        <a class="news-banner" href="iarc.html">
-          <span class="news-label">News</span>
-          <span class="news-text">View my abstracts presented at the IARC@60 Conference</span>
-          <span class="news-arrow">→</span>
-        </a>
+        <div class="news-list">
+          <a class="news-banner" href="iarc.html">
+            <span class="news-label">Conference</span>
+            <span class="news-text">View my abstracts presented at the IARC@60 Conference — two posters on melanoma prevention and indoor tanning epidemiology.</span>
+            <span class="news-arrow">→</span>
+          </a>
+          <a class="news-banner" href="https://brechs.unimib.it/2026/04/07/universalismo-ed-equita-del-ssn-la-promozione-della-longevity/" target="_blank" rel="noopener">
+            <span class="news-label">Upcoming</span>
+            <span class="news-text">Speaking at the University of Milano-Bicocca on universalism and equity in the Italian National Health Service, with a focus on longevity promotion.</span>
+            <span class="news-arrow">→</span>
+          </a>
+          <a class="news-banner" href="https://www.melanomaimi.it/105-news-home-page/1325-women-fo-skin-cancer-2026.html" target="_blank" rel="noopener">
+            <span class="news-label">Upcoming</span>
+            <span class="news-text">Participating in the Women for Skin Cancer congress in Genova, 28–29 June 2026, on gender medicine and skin cancer research.</span>
+            <span class="news-arrow">→</span>
+          </a>
+        </div>
       </section>
 
       <section id="about">
