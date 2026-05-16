@@ -686,6 +686,13 @@
         align-items: center;
       }
 
+      .work-visuals {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        align-items: end;
+      }
+
       .work-visual {
         position: sticky;
         top: 24px;
@@ -700,6 +707,22 @@
         object-position: center 72%;
         filter: url("#duomo-paper-remove");
         opacity: 0.92;
+      }
+
+      .work-visual-harvard img {
+        aspect-ratio: 3 / 4;
+        object-position: center 15%;
+        filter: none;
+        opacity: 1;
+        border-radius: 12px;
+        box-shadow: 0 12px 32px rgba(31, 31, 31, 0.12);
+      }
+
+      .work-visual figcaption {
+        margin-top: 9px;
+        color: #6b6259;
+        font-size: 13px;
+        line-height: 1.45;
       }
 
       .work-copy {
@@ -1184,11 +1207,14 @@
         .work-layout {
           grid-template-columns: 1fr;
         }
+        .work-visuals {
+          grid-template-columns: 1fr 1fr;
+        }
         .work-visual {
           position: static;
         }
         .work-visual img {
-          aspect-ratio: 16 / 9;
+          aspect-ratio: 3 / 4;
         }
         .work-copy h3 {
           font-size: 28px;
@@ -1343,9 +1369,7 @@
             from complex health data.
           </h1>
           <p>
-            My work focuses on oncology, epidemiology, predictive modelling, and AI in healthcare,
-            with biostatistics supporting the development of rigorous, interpretable, and clinically
-            relevant research.
+            My work sits at the intersection of biostatistics, oncology, and epidemiology. I focus on real-world data, predictive modelling, and AI applications in healthcare, with an interest in methods that are rigorous, reproducible, and clinically interpretable.
           </p>
           <a class="button" href="CV.pdf">Download CV</a>
           <a class="button secondary" href="#publications">View publications</a>
@@ -1366,10 +1390,7 @@
               Biostatistics at the European Institute of Oncology in Milan.
             </p>
             <p>
-              My work focuses on real-world oncology data, epidemiology,
-              predictive modelling, and the generation of evidence to support
-              clinical and public health decision-making, using approaches including survival analysis,
-              competing risks, validation studies, radiomics, and AI applications in healthcare.
+              My work involves real-world oncology data, epidemiology, and predictive modelling, using approaches such as survival analysis, competing risks, validation studies, radiomics, and AI in healthcare.
             </p>
           </div>
 
@@ -1377,19 +1398,23 @@
             <div class="about-note-title">Profile snapshot</div>
             <div class="about-row">
               <strong>Current role</strong>
-              <span>Research Fellow in Biostatistics, European Institute of Oncology</span>
+              <span><a href="https://www.research.ieo.it/aurora-gaeta/" target="_blank" rel="noopener" style="color: #8f3d2d; font-weight: 700; text-decoration: none;">Research Fellow in Biostatistics</a>, European Institute of Oncology</span>
             </div>
             <div class="about-row">
               <strong>Training</strong>
-              <span>PhD candidate, University of Milano-Bicocca</span>
+              <span>PhD candidate,<br><a href="https://www.unimib.it/aurora-gaeta" target="_blank" rel="noopener" style="color: #8f3d2d; font-weight: 700; text-decoration: none;">University of Milano-Bicocca</a></span>
             </div>
             <div class="about-row">
               <strong>Research areas</strong>
               <span>Oncology, real-world evidence, epidemiology, radiomics, and AI</span>
             </div>
             <div class="about-row">
-              <strong>Scientific output</strong>
-              <span>47 peer-reviewed publications and H-index of 10</span>
+              <strong>Affiliations</strong>
+              <span>European Institute of Oncology · University of Milano-Bicocca</span>
+            </div>
+            <div class="about-row">
+              <strong>Visiting scholar</strong>
+              <span>Harvard Medical School – Brigham and Women's Hospital,<br><a href="https://timi.org/" target="_blank" rel="noopener" style="color: #8f3d2d; font-weight: 700; text-decoration: none;">TIMI Study Group Lab</a></span>
             </div>
           </div>
 
@@ -1416,6 +1441,9 @@
                   clinical, epidemiological, and genetic data in skin cancer research
                   (International Multicentric Collaboration).
                 </p>
+                <a class="collab-link" href="https://pubmed.ncbi.nlm.nih.gov/?term=M%E2%80%90SKIP+study+group%5BCorporate+Author%5D" target="_blank" rel="noopener">
+                  Visit project →
+                </a>
               </div>
 
               <div class="collab-item">
@@ -1437,6 +1465,21 @@
                   in DCIS diagnosed with Vacuum Assisted Breast Biopsy"</em>
                   (AIRC GI 2021 – DI 25816).
                 </p>
+                <a class="collab-link" href="https://www.ieo.it/it/PNA/Lista-News/radiogenomica-dics/" target="_blank" rel="noopener">
+                  Visit project →
+                </a>
+              </div>
+
+              <div class="collab-item">
+                <h4>Italian Ministry of Health – Ricerca Finalizzata</h4>
+                <p>
+                  Research within the grant-funded project
+                  <em>"Ricerca Finalizzata GR-2016-02362050"</em>,
+                  contributing to the study of liquid biopsy applications in oncology.
+                </p>
+                <a class="collab-link" href="https://www.journalofliquidbiopsy.com/article/S2950-1954(26)00016-0/pdf" target="_blank" rel="noopener">
+                  View publication →
+                </a>
               </div>
 
             </div>
@@ -1451,9 +1494,7 @@
           <div class="expertise-intro">
             <span class="small-label">Methodological focus</span>
             <p>
-              I combine statistical modelling, clinical context, and
-              reproducible data workflows to support oncology research from
-              study design to evidence generation.
+              I apply statistical modelling and reproducible data workflows to support oncology research, from study design through to analysis and reporting.
             </p>
           </div>
 
@@ -1508,6 +1549,23 @@
                 </div>
               </div>
             </article>
+
+            <article class="expertise-item">
+              <span class="expertise-number">04</span>
+              <div>
+                <h3>Model Evaluation & Calibration</h3>
+                <p>
+                  Studying and applying methods for the assessment of predictive models,
+                  with a focus on calibration and performance evaluation in clinical research.
+                </p>
+                <div class="expertise-tags">
+                  <span>Calibration</span>
+                  <span>Model evaluation</span>
+                  <span>Predictive performance</span>
+                </div>
+                <a class="publication-link" href="https://www.ahajournals.org/doi/abs/10.1161/cir.153.suppl_1.TH875" target="_blank" rel="noopener">View related work</a>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -1516,31 +1574,29 @@
         <h2>Research, Media &amp; Impact</h2>
 
         <div class="work-layout">
-          <figure class="work-visual">
-            <img
-              src="Milan+Cathedral_edited_75cm+square.jpg.webp"
-              alt="Hand-drawn illustration of Milan Cathedral"
-            />
-          </figure>
+          <div class="work-visuals">
+            <figure class="work-visual">
+              <img
+                src="Milan+Cathedral_edited_75cm+square.jpg.webp"
+                alt="Hand-drawn illustration of Milan Cathedral"
+              />
+            </figure>
+            <figure class="work-visual work-visual-harvard">
+              <img
+                src="pic2.png"
+                alt="Aurora Gaeta at Harvard Medical School"
+              />
+              <figcaption>Visiting Research Scholar, Harvard Medical School 2025–2026</figcaption>
+            </figure>
+          </div>
 
           <div class="work-copy">
             <span class="small-label">Research network</span>
             <h3>
-              From Milan-based oncology research to international
-              collaborations.
+              Oncology research in Milan, with connections to international collaborations.
             </h3>
             <p>
-              At the European Institute of Oncology, I work at the intersection
-              of biostatistics, real-world evidence, and clinical oncology,
-              turning complex health data into reproducible evidence for
-              research teams and public health decisions.
-            </p>
-            <p>
-              My work connects methodological modelling with applied cancer
-              research: melanoma prevention, radiomics, AI-supported prediction,
-              validation studies, and multidisciplinary collaborations such as
-              Euromelanoma, M-SKIP, and the Artificial Intelligence and
-              Radiomics Board at IEO.
+              Based at IEO in Milan, I work across biostatistics, oncology, and epidemiology, with projects spanning melanoma prevention, radiomics, AI-based prediction, and breast cancer research. I also spent time as a Visiting Research Scholar at Harvard Medical School within the TIMI Study Group.
             </p>
 
             <div class="work-references" aria-label="Selected research and media links">
@@ -1570,15 +1626,13 @@
       </section>
 
       <section id="asco">
-        <h2>ASCO Posters &amp; Abstracts</h2>
+        <h2>Posters &amp; Abstracts</h2>
 
         <div class="asco-layout">
           <div class="asco-intro">
             <span class="small-label">Conference record</span>
             <p>
-              Selected oncology abstracts and poster work presented through ASCO
-              channels, with a focus on melanoma, AI in medicine, treatment
-              evidence, and rare breast tumour research.
+              Selected oncology abstracts and poster work, with a focus on melanoma, AI in medicine, treatment evidence, and rare breast tumour research.
             </p>
           </div>
 
@@ -1594,7 +1648,6 @@
                   <span>Gender medicine</span>
                 </div>
               </div>
-              <span class="asco-link">View abstract</span>
             </a>
 
             <a class="asco-item" href="https://ascopubs.org/doi/abs/10.1200/CCI-25-00210" target="_blank" rel="noopener">
@@ -1608,7 +1661,6 @@
                   <span>Radiology</span>
                 </div>
               </div>
-              <span class="asco-link">View paper</span>
             </a>
 
             <a class="asco-item" href="https://ascopubs.org/doi/10.1200/JCO.2024.42.16_suppl.e23522" target="_blank" rel="noopener">
@@ -1622,7 +1674,6 @@
                   <span>Rare tumours</span>
                 </div>
               </div>
-              <span class="asco-link">View abstract</span>
             </a>
 
             <a class="asco-item" href="https://ascopubs.org/doi/10.1200/JCO.2022.40.16_suppl.9541" target="_blank" rel="noopener">
@@ -1636,7 +1687,6 @@
                   <span>Targeted therapy</span>
                 </div>
               </div>
-              <span class="asco-link">View abstract</span>
             </a>
           </div>
         </div>
@@ -1755,11 +1805,9 @@
       <section id="contact">
         <h2>Contact</h2>
         <div class="contact-panel">
-          <h3>For research collaborations, talks, and academic enquiries.</h3>
+          <h3>Open to research collaborations, talks, and academic enquiries.</h3>
           <p>
-            I am happy to hear from research teams, clinicians, students, and
-            collaborators working across oncology, epidemiology, real-world
-            evidence, radiomics, and AI in healthcare.
+            Feel free to get in touch if you work in oncology, epidemiology, real-world evidence, radiomics, or AI in healthcare.
           </p>
           <div class="contact-actions">
             <a class="button" href="mailto:auroragaeta@gmail.com">Send an email</a>
