@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IARC@60 Posters | Aurora Gaeta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Lora:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        font-family: "Source Sans 3", Arial, sans-serif;
+        background: #f7f5f1;
+        color: #1f1f1f;
+        line-height: 1.6;
+      }
+
+      header {
+        max-width: 1100px;
+        margin: auto;
+        padding: 30px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .site-name {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: 0.01em;
+        text-decoration: none;
+        color: #1f1f1f;
+      }
+
+      .back-link {
+        font-size: 14px;
+        font-weight: 600;
+        color: #8f3d2d;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+      }
+
+      .back-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+      main {
+        max-width: 1100px;
+        margin: 60px auto 100px;
+        padding: 0 24px;
+      }
+
+      .page-intro {
+        margin-bottom: 56px;
+        border-bottom: 1px solid #d7c8b5;
+        padding-bottom: 40px;
+      }
+
+      .page-tag {
+        display: inline-flex;
+        align-items: center;
+        background: #e7dfd2;
+        color: #4a4742;
+        border: 1px solid #d8cbb9;
+        padding: 7px 14px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+
+      .page-intro h1 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 46px;
+        font-weight: 600;
+        line-height: 1.05;
+        margin-bottom: 16px;
+        color: #2d2a25;
+      }
+
+      .page-intro p {
+        font-family: "Lora", Georgia, serif;
+        font-size: 17px;
+        color: #4a4742;
+        line-height: 1.76;
+        max-width: 680px;
+      }
+
+      .posters-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+
+      .poster-card {
+        background: #fbfaf7;
+        border: 1px solid #ded2c0;
+        border-radius: 16px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .poster-number {
+        padding: 28px 32px 0;
+        color: #8f3d2d;
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1;
+      }
+
+      .poster-body {
+        padding: 16px 32px 32px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .poster-body h2 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 1.15;
+        color: #2d2a25;
+        margin-bottom: 14px;
+      }
+
+      .poster-id {
+        font-size: 12px;
+        font-weight: 700;
+        color: #8f3d2d;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      .poster-authors {
+        font-family: "Lora", Georgia, serif;
+        font-size: 13.5px;
+        color: #6b6259;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e4d9ca;
+      }
+
+      .poster-section {
+        margin-bottom: 18px;
+      }
+
+      .poster-section-title {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #8f3d2d;
+        margin-bottom: 8px;
+      }
+
+      .poster-section p {
+        font-family: "Lora", Georgia, serif;
+        font-size: 14.5px;
+        color: #4a4742;
+        line-height: 1.7;
+      }
+
+      .poster-conclusions {
+        margin-top: auto;
+        padding-top: 20px;
+        border-top: 1px solid #e4d9ca;
+      }
+
+      .conclusion-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .conclusion-list li {
+        font-family: "Lora", Georgia, serif;
+        font-size: 14px;
+        color: #4a4742;
+        line-height: 1.65;
+        padding: 6px 0 6px 18px;
+        position: relative;
+        border-bottom: 1px solid #f0e8db;
+      }
+
+      .conclusion-list li:last-child { border-bottom: 0; }
+
+      .conclusion-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 14px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #8f3d2d;
+      }
+
+      .poster-actions {
+        margin-top: 24px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 10px 18px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 160ms, color 160ms, border-color 160ms;
+      }
+
+      .btn-primary {
+        background: #1f1f1f;
+        color: #fff;
+      }
+
+      .btn-primary:hover { background: #3a3a3a; }
+
+      .btn-secondary {
+        background: transparent;
+        color: #1f1f1f;
+        border: 1px solid #c9bda9;
+      }
+
+      .btn-secondary:hover { background: #ece5da; }
+
+      footer {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px 50px;
+        color: #777;
+        font-size: 13px;
+        border-top: 1px solid #e4d9ca;
+        padding-top: 22px;
+      }
+
+      @media (max-width: 800px) {
+        .posters-grid { grid-template-columns: 1fr; }
+        .page-intro h1 { font-size: 34px; }
+        .poster-body { padding: 16px 22px 28px; }
+        .poster-number { padding: 22px 22px 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="site-name" href="index.html">Aurora Gaeta</a>
+      <a class="back-link" href="index.html">← Back to site</a>
+    </header>
+
+    <main>
+      <div class="page-intro">
+        <span class="page-tag">IARC@60 Conference</span>
+        <h1>Abstracts presented at IARC@60</h1>
+        <p>
+          Two posters presented at the IARC@60 international conference,
+          organised by the International Agency for Research on Cancer.
+          Both works stem from collaborations within the Euromelanoma network
+          and IEO research programmes.
+        </p>
+      </div>
+
+      <div class="posters-grid">
+
+        <!-- Poster 1 -->
+        <div class="poster-card">
+          <div class="poster-number">ENS53</div>
+          <div class="poster-body">
+            <p class="poster-id">Poster · IARC@60</p>
+            <h2>Effectiveness of Skin Cancer Prevention Interventions in Melanoma Survivors: a Systematic Review</h2>
+            <p class="poster-authors">
+              A. Gaeta*, L. Pierini*, E. Di Maggio, C. Doccioli, R.I. Vogel, G. Tosti, M. Saponara, W. Russell-Edu, P. Queirolo, D. Massi, V. De Giorgi, I. Stanganelli, S. Caini**, S. Gandini** — IEO, University of Milano-Bicocca, ISPRO Florence, University of Minnesota, and collaborating centres.
+            </p>
+
+            <div class="poster-section">
+              <div class="poster-section-title">Background</div>
+              <p>Melanoma survivors and their relatives are at increased risk of subsequent skin cancers. Despite evidence that simple behavioural changes can reduce risk, real-world uptake remains limited. This systematic review and meta-analysis examined RCTs evaluating prevention interventions in this high-risk population.</p>
+            </div>
+
+            <div class="poster-section">
+              <div class="poster-section-title">Methods</div>
+              <p>Systematic review and meta-analysis (PRISMA 2020). PubMed and Embase searched up to October 2025. 3,761 records identified; 17 RCTs included. Random-effects models; Summary Odds Ratio (SOR) with 95% CI. Risk of bias assessed with Cochrane RoB 2.</p>
+            </div>
+
+            <div class="poster-conclusions">
+              <div class="poster-section-title">Key findings</div>
+              <ul class="conclusion-list">
+                <li>Interventions significantly improved skin self-examination (SOR 2.05), limiting time outdoors (SOR 1.65), and wearing head protection (SOR 1.89).</li>
+                <li>Effects on total cutaneous examination and shade-seeking were positive but not statistically significant.</li>
+                <li>Control-arm design strongly influences observed effect sizes and heterogeneity.</li>
+                <li>Device-based interventions alone showed no significant impact on any outcome.</li>
+              </ul>
+            </div>
+
+            <div class="poster-actions">
+              <a class="btn btn-primary" href="poster1.pdf" target="_blank">Download poster PDF</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poster 2 -->
+        <div class="poster-card">
+          <div class="poster-number">ENS54</div>
+          <div class="poster-body">
+            <p class="poster-id">Poster · IARC@60</p>
+            <h2>Indoor Tanning: Prevalence, Trends and Determinants from the Euromelanoma Campaign</h2>
+            <p class="poster-authors">
+              A. Gaeta, H. Njimi, J.L. Bulliard, O. Correia, A.F. Duarte, K. Peris, A.J. Stratigos, E. Nagore, M.I. Longo, M. Bylaite-Bucinskiene, R. Karls, H. Helppikangas, Euromelanoma Working Group, V. Del Marmol, S. Gandini, M. Suppa — IEO, University of Milano-Bicocca, and 18 European institutions.
+            </p>
+
+            <div class="poster-section">
+              <div class="poster-section-title">Background</div>
+              <p>Indoor tanning devices emit UVA radiation classified as Group 1 carcinogen by the WHO. Regular use before age 35 increases melanoma risk by approximately 75%. Despite public-health efforts, European prevalence data remain fragmented. The Euromelanoma campaign (N = 391,489 participants, 30 countries, 2009–2018) provides a unique platform for behavioural surveillance.</p>
+            </div>
+
+            <div class="poster-section">
+              <div class="poster-section-title">Methods</div>
+              <p>Cross-sectional survey embedded in the annual Euromelanoma skin-cancer-awareness campaign. Multivariable logistic regression for determinants (adjusted OR with 95% CI); country included as random effect.</p>
+            </div>
+
+            <div class="poster-conclusions">
+              <div class="poster-section-title">Key findings</div>
+              <ul class="conclusion-list">
+                <li>Indoor tanning prevalence more than halved from 12.22% in 2009 to 5.89% in 2018.</li>
+                <li>Female sex was the strongest predictor of use (OR 2.99), followed by age 20–35 years (OR 2.50).</li>
+                <li>Higher prevalence in northern, high-latitude countries; each degree of latitude associated with OR 1.08.</li>
+                <li>Sunbed use is shaped more by behavioural and cultural factors than by environmental exposure alone.</li>
+              </ul>
+            </div>
+
+            <div class="poster-actions">
+              <a class="btn btn-primary" href="poster2.pdf" target="_blank">Download poster PDF</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer>
+      <span>© 2026 Aurora Gaeta</span>
+    </footer>
+  </body>
+</html>
