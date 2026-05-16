@@ -1509,7 +1509,7 @@
             from complex health data.
           </h1>
           <p>
-            My work sits at the intersection of biostatistics, oncology, and epidemiology. I focus on real-world data, predictive modelling, and AI applications in healthcare, with an interest in methods that are rigorous, reproducible, and clinically interpretable.
+            I work in biostatistics, with a focus on oncology and epidemiology. My research involves real-world data, predictive modelling, and AI applications in healthcare. I am genuinely interested in AI, both its transformative potential and the methodological challenges it brings.
           </p>
           <a class="button" href="CV.pdf">Download CV</a>
           <a class="button secondary" href="#publications">View publications</a>
@@ -2179,5 +2179,54 @@
       animateHeroPencil();
       loadOpenAlexPublications();
     </script>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M12 4.5 3.75 12.75h5.25V19.5h6V12.75h5.25z"/>
+      </svg>
+    </button>
+
+    <style>
+      .back-to-top {
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        background: #1f1f1f;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 16px rgba(31,31,31,0.18);
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 200ms ease, transform 200ms ease, background 160ms ease;
+        z-index: 100;
+        pointer-events: none;
+      }
+      .back-to-top svg {
+        width: 18px;
+        height: 18px;
+      }
+      .back-to-top.visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .back-to-top:hover {
+        background: #3a3a3a;
+      }
+    </style>
+
+    <script>
+      const btn = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('visible', window.scrollY > 400);
+      }, {passive: true});
+    </script>
+
   </body>
 </html>
