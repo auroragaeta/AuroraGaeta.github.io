@@ -1472,6 +1472,7 @@
         <a href="#work">Impact</a>
         <a href="#asco">Posters</a>
         <a href="#talks">Talks</a>
+        <a href="#blog">Notes</a>
         <a class="nav-contact" href="#contact">Contact</a>
       </nav>
     </header>
@@ -1522,6 +1523,11 @@
 
       <section id="news">
         <div class="news-list">
+          <a class="news-banner" href="https://www.ibc2026.org/home" target="_blank" rel="noopener">
+            <span class="news-label">Upcoming</span>
+            <span class="news-text">Attending the International Biometric Conference 2026 (IBC2026).</span>
+            <span class="news-arrow">→</span>
+          </a>
           <a class="news-banner" href="iarc.html">
             <span class="news-label">Conference</span>
             <span class="news-text">View my abstracts presented at the IARC@60 Conference — two posters on melanoma prevention and indoor tanning epidemiology.</span>
@@ -1567,6 +1573,14 @@
             <div class="about-row">
               <strong>Visiting scholar</strong>
               <span>Harvard Medical School – Brigham and Women's Hospital,<br><a href="https://timi.org/" target="_blank" rel="noopener" style="color: #8f3d2d; font-weight: 700; text-decoration: none;">TIMI Study Group Lab</a></span>
+            </div>
+            <div class="about-row">
+              <strong>Member</strong>
+              <span><a href="https://members.biometricsociety.org/membership/benefits" target="_blank" rel="noopener" style="color: #8f3d2d; font-weight: 700; text-decoration: none;">International Biometric Society</a></span>
+            </div>
+            <div class="about-row">
+              <strong>Member</strong>
+              <span><a href="https://iscb.international/early-career-biostatisticians/" target="_blank" rel="noopener" style="color: #8f3d2d; font-weight: 700; text-decoration: none;">Early Career Biostatisticians</a>,<br>ISCB Group Mentorship Programme</span>
             </div>
           </div>
 
@@ -1974,6 +1988,56 @@
         </div>
       </section>
 
+      <!-- ═══════════════════ BLOG / NOTES ═══════════════════ -->
+      <section id="blog">
+        <h2>Notes</h2>
+        <div class="blog-layout">
+          <div class="blog-intro"></div>
+          <div class="blog-list">
+
+            <!-- ─── POST TEMPLATE ───────────────────────────────────────
+                 To add a new post, copy the <article> block below,
+                 paste it above the previous ones, and fill in:
+                   · data-date   → ISO date, e.g. 2026-05-27
+                   · .blog-date  → readable date shown on screen
+                   · .blog-tag   → topic pill (e.g. Biostatistics, AI, Epidemiology)
+                   · <h3>        → title
+                   · <p>         → excerpt / full short text
+                   · href        → link to a full post file, or "#" if self-contained
+            ─────────────────────────────────────────────────────────── -->
+
+            <article class="blog-item" data-date="2026-05-27">
+              <div class="blog-item-meta">
+                <span class="blog-date">27 May 2026</span>
+                <span class="blog-tag">Resources</span>
+              </div>
+              <h3>ALLSTAT digest — May 2026</h3>
+              <p>
+                ALLSTAT is a UK-based mailing list for statisticians covering job postings, software tips, methodological discussions, and announcements from the statistical community. This month's digest is worth a read.
+              </p>
+              <a class="blog-read-more" href="https://www.jiscmail.ac.uk/cgi-bin/wa-jisc.exe?A1=ind2605&L=ALLSTAT" target="_blank" rel="noopener">Open digest →</a>
+            </article>
+
+            <article class="blog-item">
+              <div class="blog-item-meta">
+                <span class="blog-tag">Resources</span>
+              </div>
+              <h3>International Biometric Society</h3>
+              <a class="blog-read-more" href="https://members.biometricsociety.org/" target="_blank" rel="noopener">Visit IBS →</a>
+            </article>
+
+            <article class="blog-item">
+              <div class="blog-item-meta">
+                <span class="blog-tag">Resources</span>
+              </div>
+              <h3>International Society for Clinical Biostatistics</h3>
+              <a class="blog-read-more" href="https://iscb.international/" target="_blank" rel="noopener">Visit ISCB →</a>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
       <section id="contact">
         <h2>Contact</h2>
         <div class="contact-panel">
@@ -2184,6 +2248,90 @@
         <path fill="currentColor" d="M12 4.5 3.75 12.75h5.25V19.5h6V12.75h5.25z"/>
       </svg>
     </button>
+
+    <style>
+      /* ── Blog / Notes ── */
+      .blog-layout {
+        display: grid;
+        grid-template-columns: minmax(240px, 0.58fr) minmax(0, 1fr);
+        gap: 52px;
+        align-items: start;
+      }
+
+      .blog-intro p {
+        font-family: "Lora", Georgia, serif;
+        color: #4a4742;
+        font-size: 17px;
+        line-height: 1.76;
+      }
+
+      .blog-list {
+        border-top: 1px solid #d7c8b5;
+      }
+
+      .blog-item {
+        padding: 28px 0;
+        border-bottom: 1px solid #e4d9ca;
+      }
+
+      .blog-item-meta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .blog-date {
+        font-size: 13px;
+        color: #6b6259;
+        font-family: "Source Sans 3", Arial, sans-serif;
+      }
+
+      .blog-tag {
+        background: #e7dfd2;
+        color: #4a4742;
+        border-radius: 999px;
+        padding: 3px 10px;
+        font-size: 11.5px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .blog-item h3 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 26px;
+        font-weight: 600;
+        color: #2d2a25;
+        line-height: 1.12;
+        margin-bottom: 10px;
+      }
+
+      .blog-item p {
+        font-family: "Lora", Georgia, serif;
+        font-size: 15px;
+        color: #4a4742;
+        line-height: 1.72;
+        margin-bottom: 14px;
+      }
+
+      .blog-read-more {
+        color: #8f3d2d;
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+      }
+
+      .blog-read-more:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      @media (max-width: 800px) {
+        .blog-layout { grid-template-columns: 1fr; gap: 28px; }
+      }
+    </style>
 
     <style>
       .back-to-top {
